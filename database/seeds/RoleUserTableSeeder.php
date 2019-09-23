@@ -12,7 +12,7 @@ class RoleUserTableSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0; $i < 5; $i++) {
+        for($i = 1; $i < 6; $i++) {
             User::query()->findOrFail($i)->roles()->sync($i);
         }
     }
