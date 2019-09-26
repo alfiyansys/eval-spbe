@@ -84,11 +84,11 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link active" href="#navbar-examples1" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #3832a8;"></i>
                         <span class="nav-link-text" style="color: #3832a8">{{ __('User Setting') }}</span>
                     </a>
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse" id="navbar-examples1">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
@@ -105,25 +105,25 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link active" href="#navbar-examples2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #3832a8;"></i>
                         <span class="nav-link-text" style="color: #3832a8;">{{ __('Evaluation Management') }}</span>
                     </a>
 
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse" id="navbar-examples2">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/eval/form') }}" style="color:#3832a8;">
                                     {{ __('Form Management') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/eval/domain') }}" style="color:#3832a8;">
                                     {{ __('Domains Management') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/eval/aspect') }}" style="color:#3832a8;">
                                     {{ __('Aspects Management') }}
                                 </a>
                             </li>
@@ -132,22 +132,22 @@
                                     {{ __('Indicators Management') }}
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                    {{ __('Asign Form') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                    <a class="nav-link active" href="#navbar-examples3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                         <i class="fab fa-laravel" style="color: #3832a8;"></i>
                         <span class="nav-link-text" style="color: #3832a8;">{{ __('Review Management') }}</span>
                     </a>
-                    <div class="collapse show" id="navbar-examples">
+                    <div class="collapse" id="navbar-examples3">
                         <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
-                                    {{ __('Form List') }}
-                                </a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
                                     {{ __('Form Status') }}
@@ -176,8 +176,6 @@
                         </ul>
                     </div>
                 </li>
-                <br>
-                <br>
             </ul>
         </div>
     </div>

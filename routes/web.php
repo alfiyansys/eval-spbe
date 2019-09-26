@@ -28,3 +28,21 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+Route::get('/eval/form', function(){
+	return view('evaluation.tabel');
+});
+Route::get('/eval/form/add', function(){
+	return view('evaluation.create');
+});
+Route::get('/eval/domain', function(){
+	return view('evaluation.domain');
+});
+Route::get('/eval/domain/add', function(){
+	return view('evaluation.createdomain');
+});
+Route::get('/eval/aspect', function(){
+	return view('evaluation.aspect');
+});
+Route::get('/eval/aspect/add', function(){
+	return view('evaluation.createaspect');
+});
