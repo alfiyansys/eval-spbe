@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoleUserFormPivotTable extends Migration
+class CreateFormAdministratorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRoleUserFormPivotTable extends Migration
      */
     public function up()
     {
-        Schema::create('role_user_form', function (Blueprint $table) {
+        Schema::create('form_administrators', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -31,6 +31,6 @@ class CreateRoleUserFormPivotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role_user_form');
+        Schema::dropIfExists('form_administrators');
     }
 }

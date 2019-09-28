@@ -17,8 +17,8 @@ class CreateReviewHistoriesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('indicator_option_id');
             $table->foreign('indicator_option_id')->references('id')->on('indicator_options')->onDelete('cascade');
-            $table->unsignedBigInteger('role_user_form_id');
-            $table->foreign('role_user_form_id')->references('id')->on('role_user_form')->onDelete('cascade');
+            $table->unsignedBigInteger('form_administrator_id');
+            $table->foreign('form_administrator_id')->references('id')->on('form_administrators')->onDelete('cascade');
             $table->timestamps();
         });
     }
