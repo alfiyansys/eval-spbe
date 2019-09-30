@@ -46,3 +46,15 @@ Route::get('/eval/aspect', function(){
 Route::get('/eval/aspect/add', function(){
 	return view('evaluation.createaspect');
 });
+Route::get('/eval/indicator', function(){
+	return view('evaluation.indicator');
+});
+Route::get('/eval/indicator/add', function(){
+	return view('evaluation.createindicator');
+});
+Route::get('/eval/asign', function(){
+	return view('evaluation.asign');
+});
+Route::get('/evaljob', function(){
+	return view('jobs');
+});
