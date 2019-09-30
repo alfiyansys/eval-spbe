@@ -10,40 +10,40 @@
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Create Form') }}</h3>
+                                <h3 class="mb-0">{{ __('Create Indicator') }}</h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ url('/eval/aspect') }}" class="btn btn-sm btn-primary">{{ __('Back') }}</a>
+                                <a href="{{ url('/eval/indicator') }}" class="btn btn-sm btn-primary">{{ __('Back') }}</a>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('/eval/aspect/dd') }}" method="post">
+                        <form action="{{ url('/eval/indicator/add') }}" method="post">
                             @csrf
                             <div class="form-group">
-                                <label for="">Select Domain</label> <br>
+                                <label for="">Select Aspect</label> <br>
                                 <table>
                                     <tr>
                                         <td>
                                             <select name="Domain_Id" >
-                                                <option value="1"> Domain 1</option>
-                                                <option value="2"> Domain 2</option>
-                                                <option value="3"> Domain 3</option>
+                                                <option value="1"> Aspect 1</option>
+                                                <option value="2"> Aspect 2</option>
+                                                <option value="3"> Aspect 3</option>
                                             </select>
                                         </td>
                                         <td>
-                                        <a href="{{ url('/eval/domain/add') }}" class="btn btn-sm btn-primary">{{ __('Add Domains') }}</a>
+                                        <a href="{{ url('/eval/aspect/add') }}" class="btn btn-sm btn-primary">{{ __('Add Aspect') }}</a>
                                         </td>
                                     </tr>
                                 </table>
                             </div>
                             <div class="form-group">
-                                <label for="">Name</label>
+                                <label for="">Indicator Name</label>
                                 <input type="text" name="name" class="form-control" placeholder="Masukkan username">
                             </div>
                             <div class="form-group">
-                                <label for="">Timestamp</label>
-                                <input type="text" name="timestamp" class="form-control" placeholder="Masukkan password">
+                                <label for="">Indicator Question</label>
+                                <input type="text" name="question" class="form-control" placeholder="Masukkan password">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-danger btn-sm">Simpan</button>

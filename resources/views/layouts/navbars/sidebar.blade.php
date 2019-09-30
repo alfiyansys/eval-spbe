@@ -128,12 +128,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/eval/indicator') }}" style="color:#3832a8;">
                                     {{ __('Indicators Management') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/eval/asign') }}" style="color:#3832a8;">
                                     {{ __('Asign Form') }}
                                 </a>
                             </li>
@@ -175,6 +175,12 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/evaljob') }}" style="color:#3832a8;">
+                        {{ __('Evaluation Jobs') }}
+                    </a>
                 </li>
             </ul>
         </div>
