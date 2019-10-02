@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReviewHistoriesTable extends Migration
+class CreateFormIndicatorReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateReviewHistoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('review_histories', function (Blueprint $table) {
+        Schema::create('form_indicator_reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('indicator_option_id');
-            $table->foreign('indicator_option_id')->references('id')->on('indicator_options')->onDelete('cascade');
-            $table->unsignedBigInteger('form_administrator_id');
-            $table->foreign('form_administrator_id')->references('id')->on('form_administrators')->onDelete('cascade');
+            $table->unsignedBigInteger('form_id');
+            $table->unsignedBigInteger('stage_id');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateReviewHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('review_histories');
+        Schema::dropIfExists('form_indicator_reviews');
     }
 }

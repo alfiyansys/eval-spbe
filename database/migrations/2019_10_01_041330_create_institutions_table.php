@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIndicatorsTable extends Migration
+class CreateInstitutionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateIndicatorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('indicators', function (Blueprint $table) {
+        Schema::create('institutions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('aspect_id');
-            $table->foreign('aspect_id')->references('id')->on('aspects')->onDelete('cascade');
+            $table->string('code');
             $table->string('name');
-            $table->string('question');
+            $table->string('acronym');
+            $table->string('questionnaire_target');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateIndicatorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('indicators');
+        Schema::dropIfExists('institutions');
     }
 }

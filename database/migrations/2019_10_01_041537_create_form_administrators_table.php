@@ -16,11 +16,9 @@ class CreateFormAdministratorsTable extends Migration
         Schema::create('form_administrators', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('role_id');
-            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->unsignedBigInteger('form_id');
-            $table->foreign('form_id')->references('id')->on('forms')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

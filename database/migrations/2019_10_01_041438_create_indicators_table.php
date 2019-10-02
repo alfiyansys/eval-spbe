@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDomainsTable extends Migration
+class CreateIndicatorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateDomainsTable extends Migration
      */
     public function up()
     {
-        Schema::create('domains', function (Blueprint $table) {
+        Schema::create('indicators', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('aspect_id');
+            $table->foreign('aspect_id')->references('id')->on('aspects');
             $table->string('name');
+            $table->string('question');
             $table->timestamps();
-        });
-        Schema::table('forms', function (Blueprint $table) {
-            $table->unsignedBigInteger('domain_id')->nullable();
-            $table->foreign('domain_id')->references('id')->on('domains')->onDelete('set null');
         });
     }
 
@@ -31,6 +30,6 @@ class CreateDomainsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('domains');
+        Schema::dropIfExists('indicators');
     }
 }

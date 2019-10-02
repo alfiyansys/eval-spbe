@@ -11,4 +11,8 @@ class Domain extends Model
     protected $fillable = [
         'id', 'name', 'created_at', 'updated_at'
     ];
+
+    protected $dates = [
+        'created_at', 'updated_at'
+    ];
 }

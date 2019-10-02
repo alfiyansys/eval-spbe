@@ -16,7 +16,14 @@ class DatabaseSeeder extends Seeder
              RolesTableSeeder::class,
              PermissionsTableSeeder::class,
              RoleUserTableSeeder::class,
-             PermissionRoleTableSeeder::class
+             PermissionRoleTableSeeder::class,
+             StagesTableSeeder::class,
+
+             // Seeder for examples only
+             DomainsTableSeeder::class,
+             AspectsTableSeeder::class,
+             IndicatorsTableSeeder::class,
+             FormsTableSeeder::class
          ]);
     }
 }

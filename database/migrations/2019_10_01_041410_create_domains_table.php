@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateIndicatorFilesTable extends Migration
+class CreateDomainsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateIndicatorFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('indicator_files', function (Blueprint $table) {
+        Schema::create('domains', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('review_history_id');
-            $table->foreign('review_history_id')->references('id')->on('review_histories')->onDelete('cascade');
-            $table->string('filename');
-            $table->string('extension');
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class CreateIndicatorFilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('indicator_files');
+        Schema::dropIfExists('domains');
     }
 }

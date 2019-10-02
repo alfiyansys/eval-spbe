@@ -30,6 +30,6 @@ class StagesTableSeeder extends Seeder
             ],
         ];
 
-        Stage::query()->create($stages);
+        Stage::query()->insert($stages);
     }
 }

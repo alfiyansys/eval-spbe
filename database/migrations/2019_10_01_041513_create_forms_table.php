@@ -21,9 +21,6 @@ class CreateFormsTable extends Migration
             $table->integer('version');
             $table->date('start_date');
             $table->date('end_date');
-            $table->decimal('domain_weight');
-            $table->decimal('aspect_weight');
-            $table->decimal('indicator_weight');
             $table->timestamps();
         });
     }

@@ -12,6 +12,10 @@ class Indicator extends Model
         'id', 'aspect_id', 'name', 'question', 'created_at', 'updated_at'
     ];
 
+    protected $dates = [
+        'created_at', 'updated_at'
+    ];
+
     public function aspect() {
         return $this->belongsTo(Aspect::class, 'aspect_id', 'id');
     }

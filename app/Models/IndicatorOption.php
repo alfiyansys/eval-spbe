@@ -12,7 +12,7 @@ class IndicatorOption extends Model
         'id', 'indicator_id', 'title', 'level', 'created_at', 'updated_at'
     ];
 
-    public function indicator() {
-        return $this->belongsTo(Indicator::class, 'indicator_id', 'id');
-    }
+    protected $dates = [
+        'created_at', 'updated_at'
+    ];
 }
