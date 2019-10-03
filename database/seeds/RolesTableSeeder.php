@@ -27,13 +27,13 @@ class RolesTableSeeder extends Seeder
             ],
             [
                 'id' => '3',
-                'title' => 'Lead of Evaluator Internal',
+                'title' => 'Evaluator Internal Supervisor',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
                 'id' => '4',
-                'title' => 'Evaluator Internal',
+                'title' => 'Evaluator Internal Operator',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ],
