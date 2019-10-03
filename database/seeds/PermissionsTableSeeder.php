@@ -14,106 +14,172 @@ class PermissionsTableSeeder extends Seeder
     {
         $permissions = [
             [
-                'id' => '1',
                 'title' => 'user_management_access',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '2',
                 'title' => 'permission_create',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '3',
                 'title' => 'permission_edit',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '4',
                 'title' => 'permission_show',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '5',
                 'title' => 'permission_delete',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '6',
                 'title' => 'permission_access',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '7',
                 'title' => 'role_create',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '8',
                 'title' => 'role_edit',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '9',
                 'title' => 'role_show',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '10',
                 'title' => 'role_delete',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '11',
                 'title' => 'role_access',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '12',
                 'title' => 'user_create',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '13',
                 'title' => 'user_edit',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '14',
                 'title' => 'user_show',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '15',
                 'title' => 'user_delete',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '16',
                 'title' => 'user_access',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
             ],
             [
-                'id' => '17',
-                'title' => 'user_role_change',
-                'created_at' => date('Y-m-d H:i:s'),
-                'updated_at' => date('Y-m-d H:i:s'),
+                'title' => 'user_role_edit',
+            ],
+            [
+                'title' => 'form_create',
+            ],
+            [
+                'title' => 'form_edit',
+            ],
+            [
+                'title' => 'form_show',
+            ],
+            [
+                'title' => 'form_delete',
+            ],
+            [
+                'title' => 'form_access',
+            ],
+            [
+                'title' => 'role_user_form_edit',
+            ],
+            [
+                'title' => 'domain_create',
+            ],
+            [
+                'title' => 'domain_edit',
+            ],
+            [
+                'title' => 'domain_show',
+            ],
+            [
+                'title' => 'domain_delete',
+            ],
+            [
+                'title' => 'domain_access',
+            ],
+            [
+                'title' => 'aspect_create',
+            ],
+            [
+                'title' => 'aspect_edit',
+            ],
+            [
+                'title' => 'aspect_show',
+            ],
+            [
+                'title' => 'aspect_delete',
+            ],
+            [
+                'title' => 'aspect_access',
+            ],
+            [
+                'title' => 'indicator_create',
+            ],
+            [
+                'title' => 'indicator_edit',
+            ],
+            [
+                'title' => 'indicator_show',
+            ],
+            [
+                'title' => 'indicator_delete',
+            ],
+            [
+                'title' => 'indicator_access',
+            ],
+            [
+                'title' => 'indicator_option_create',
+            ],
+            [
+                'title' => 'indicator_option_edit',
+            ],
+            [
+                'title' => 'indicator_option_show',
+            ],
+            [
+                'title' => 'indicator_option_delete',
+            ],
+            [
+                'title' => 'indicator_option_access',
+            ],
+            [
+                'title' => 'indicator_file_create',
+            ],
+            [
+                'title' => 'indicator_file_edit',
+            ],
+            [
+                'title' => 'indicator_file_show',
+            ],
+            [
+                'title' => 'indicator_file_delete',
+            ],
+            [
+                'title' => 'indicator_file_access',
+            ],
+            [
+                'title' => 'indicator_file_create',
+            ],
+            [
+                'title' => 'review_history_create',
+            ],
+            [
+                'title' => 'review_history_edit',
+            ],
+            [
+                'title' => 'stage_create',
+            ],
+            [
+                'title' => 'stage_edit',
+            ],
+            [
+                'title' => 'stage_show',
+            ],
+            [
+                'title' => 'stage_delete',
+            ],
+            [
+                'title' => 'stage_access',
             ],
         ];
 
