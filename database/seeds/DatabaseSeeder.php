@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
              DomainsTableSeeder::class,
              AspectsTableSeeder::class,
              IndicatorsTableSeeder::class,
+             IndicatorOptionsTableSeeder::class,
              FormsTableSeeder::class
          ]);
     }
