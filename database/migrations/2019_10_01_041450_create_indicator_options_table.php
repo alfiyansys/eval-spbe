@@ -16,8 +16,8 @@ class CreateIndicatorOptionsTable extends Migration
         Schema::create('indicator_options', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('indicator_id');
-            $table->foreign('indicator_id')->references('id')->on('indicators')->onDelete('cascade');
-            $table->string('title');
+            $table->foreign('indicator_id')->references('id')->on('indicators');
+            $table->text('title');
             $table->integer('level');
             $table->timestamps();
         });
