@@ -149,27 +149,27 @@
                     <div class="collapse" id="navbar-examples3">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/review/form-status') }}" style="color:#3832a8;">
                                     {{ __('Form Status') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/review/supervisor-list') }}" style="color:#3832a8;">
                                     {{ __('Supervisors Internal List') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{url('/review/operator-list') }}" style="color:#3832a8;">
                                     {{ __('Operators List') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile.edit') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/review/external-list') }}" style="color:#3832a8;">
                                     {{ __('External Evaluators List') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}" style="color:#3832a8;">
+                                <a class="nav-link" href="{{ url('/review/graph-report') }}" style="color:#3832a8;">
                                     {{ __('Grafics Reposts') }}
                                 </a>
                             </li>
