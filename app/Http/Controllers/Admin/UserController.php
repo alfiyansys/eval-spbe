@@ -24,7 +24,7 @@ class UserController extends Controller
      */
     public function index(User $model)
     {
-        abort_unless(Gate::allows('user_access'), 403);
+//        abort_unless(Gate::allows('user_access'), 403);
 
         return view('users.index', ['users' => $model->paginate(15)]);
     }
@@ -36,7 +36,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        abort_unless(Gate::allows('user_create'), 403);
+//        abort_unless(Gate::allows('user_create'), 403);
 
         $roles = Role::all()->pluck('title', 'id');
 
@@ -51,7 +51,7 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        abort_unless(Gate::allows('user_create'), 403);
+//        abort_unless(Gate::allows('user_create'), 403);
 
         $user = User::query()->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
 
@@ -65,7 +65,7 @@ class UserController extends Controller
      * @return Factory|View
      */
     public function show(User $user) {
-        abort_unless(Gate::allows('user_show'), 403);
+//        abort_unless(Gate::allows('user_show'), 403);
 
         $user->load('roles');
 
@@ -80,7 +80,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        abort_unless(Gate::allows('user_edit'), 403);
+//        abort_unless(Gate::allows('user_edit'), 403);
 
         $roles = Role::all()->pluck('title', 'id');
 
@@ -98,7 +98,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User  $user)
     {
-        abort_unless(Gate::allows('user_edit'), 403);
+//        abort_unless(Gate::allows('user_edit'), 403);
 
         $hasPassword = $request->get("password");
         $user->update(
@@ -119,7 +119,7 @@ class UserController extends Controller
      */
     public function destroy(User  $user)
     {
-        abort_unless(Gate::allows('user_show'), 403);
+//        abort_unless(Gate::allows('user_show'), 403);
 
         $user->delete();
 
