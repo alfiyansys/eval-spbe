@@ -28,3 +28,52 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+Route::get('/eval/form', function(){
+	return view('evaluation.tabel');
+});
+Route::get('/eval/form/add', function(){
+	return view('evaluation.create');
+});
+Route::get('/eval/domain', function(){
+	return view('evaluation.domain');
+});
+Route::get('/eval/domain/add', function(){
+	return view('evaluation.createdomain');
+});
+Route::get('/eval/aspect', function(){
+	return view('evaluation.aspect');
+});
+Route::get('/eval/aspect/add', function(){
+	return view('evaluation.createaspect');
+});
+Route::get('/eval/indicator', function(){
+	return view('evaluation.indicator');
+});
+Route::get('/eval/indicator/add', function(){
+	return view('evaluation.createindicator');
+});
+Route::get('/eval/asign', function(){
+	return view('evaluation.asign');
+});
+Route::get('/evaljob', function(){
+	return view('jobs');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('user', 'UserController');
+    Route::get('/review/form-status', function(){
+        return view('review.form-status');
+    });
+    Route::get('/review/supervisor-list', function(){
+        return view('review.supervisor-list');
+    });
+    Route::get('/review/operator-list', function(){
+        return view('review.operator-list');
+    });
+    Route::get('/review/external-list', function(){
+        return view('review.external-list');
+    });
+    Route::get('/review/graph-report', function(){
+        return view('review.graph-report');
+    });
+});
